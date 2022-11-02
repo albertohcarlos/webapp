@@ -1,7 +1,7 @@
 import { create } from 'apisauce';
 
 export const proxyAPI = create({
-    baseURL: 'http://localhost:8081/api',
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
         'Content-Type': 'application/json',
         user: null,
