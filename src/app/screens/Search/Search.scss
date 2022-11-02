@@ -1,0 +1,66 @@
+@import "../../../scss/variables/colors";
+@import "../../../scss/variables/sizes";
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+    min-height: 4.4rem;
+    display: flex;
+}
+
+.ui-search-categories {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.ui-search-category {
+    font-size: $sz-search-category;
+    color: $gray-2;
+    cursor: pointer;
+}
+
+.ui-search-category:last-child {
+    font-weight: bold;
+}
+
+.ui-search-category:not(:last-child)::after {
+    content: ">";
+    cursor: auto;
+    padding: 0 0.8rem;
+}
+
+// Search content
+.ui-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+    gap: 3.5rem;
+    border-radius: 4px;
+    padding: 1.6rem;
+    overflow: hidden;
+}
+
+.ui-search-item {
+    width: 100%;
+    position: relative;
+    border-radius: 4px;
+}
+
+.ui-search-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1.75rem;
+    border-bottom: 2px solid $gray-1;
+    padding: 10px 0;
+}
