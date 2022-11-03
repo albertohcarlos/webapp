@@ -16,7 +16,7 @@ const Details = () => {
     let result
     try {
 
-      result = (await getItem(id)).data
+      result = (await getItem(id))?.data
       if (!result.item) {
         setError(true);
         return;

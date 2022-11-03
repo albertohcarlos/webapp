@@ -18,7 +18,7 @@ const Search = () => {
 
     const getQuery = async () => {
       const search = queries.search
-      const result = (await searchQuery(search)).data
+      const result = (await searchQuery(search))?.data
 
       if (!result?.items?.length) { setError(true); return }
       setCategories(result.categories)
